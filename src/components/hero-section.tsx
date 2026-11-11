@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Container } from "./container";
 import { site } from "@/lib/site";
 
-const headline = "The key to all your software needs.";
+const headline = "AI Solutions for Businesses of Every Size";
 
 export function HeroSection() {
   const words = headline.split(" ");
@@ -21,14 +21,12 @@ export function HeroSection() {
       <Container className="pt-24 pb-28 lg:pt-32 lg:pb-36 relative">
         {/* Eyebrow */}
         <motion.div
-          className="flex items-center gap-3"
+          className="inline-flex items-center gap-2 rounded-full border border-canvas/20 bg-canvas/10 px-3 py-1 text-xs font-semibold tracking-widest text-canvas/70 uppercase"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <span className="num-label !text-accent">Est. {site.established}</span>
-          <span className="h-px w-10 bg-canvas/30" />
-          <span className="eyebrow !text-canvas/70">Phoenix, AZ · Since 2016</span>
+          {`Est. ${site.established}`}
         </motion.div>
 
         {/* Headline — word-by-word reveal */}
@@ -59,7 +57,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.75, ease: "easeOut" }}
         >
           <p className="md:col-span-6 lg:col-span-5 text-[18px] leading-relaxed text-canvas/85">
-            We&apos;re a small team that helps growing businesses get repetitive work
+            We help growing businesses get repetitive work
             off their plate using AI automation. Not demos — the kind that actually
             sticks because we stay involved after the launch.
           </p>

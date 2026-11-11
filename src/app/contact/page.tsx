@@ -4,9 +4,32 @@ import { site } from "@/lib/site";
 import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact · TechKey Solutions",
+  title: "Contact TechKey Solutions — Start Your AI Automation Project",
   description:
-    "Get in touch with TechKey Solutions. Email, phone, or send us a note about your project.",
+    "Ready to automate your business workflows? Get in touch with TechKey Solutions — we'll respond within one business day.",
+  keywords: [
+    "contact TechKey Solutions",
+    "AI automation consultation",
+    "hire AI consultant",
+    "business automation quote",
+    "TechKey Solutions contact",
+  ],
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact TechKey Solutions — Start Your AI Automation Project",
+    description:
+      "Ready to automate your business workflows? Get in touch — we'll respond within one business day.",
+    url: "/contact",
+    siteName: site.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact TechKey Solutions — Start Your AI Automation Project",
+    description:
+      "Ready to automate your business workflows? Get in touch — we'll respond within one business day.",
+  },
 };
 
 export default function ContactPage() {

@@ -23,13 +23,25 @@ export const metadata: Metadata = {
   description:
     "TechKey Solutions helps small and mid-sized businesses implement practical AI solutions that reduce manual work, improve customer response times, and drive measurable results.",
   metadataBase: new URL("https://thetks.com"),
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "TechKey Solutions",
+    title: "TechKey Solutions — AI Automation & Business Optimization",
     description:
       "Practical AI automation for small and mid-sized businesses. Real operational outcomes — not experimental AI projects.",
     url: "https://thetks.com",
     siteName: "TechKey Solutions",
+    locale: "en_US",
+    images: [
+      { url: "/og-image.png", width: 1200, height: 630, alt: "TechKey Solutions" },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TechKey Solutions — AI Automation & Business Optimization",
+    description:
+      "Practical AI automation for small and mid-sized businesses. Real operational outcomes — not experimental AI projects.",
+    images: ["/og-image.png"],
   },
 };
 
