@@ -1,7 +1,7 @@
 export const site = {
   name: "TechKey Solutions",
   shortName: "TKS",
-  tagline: "The key to all your software needs",
+  tagline: "AI Solutions for Businesses of Every Size",
   established: 2016,
   email: "info@TheTKS.com",
   phone: "480-658-5391",
