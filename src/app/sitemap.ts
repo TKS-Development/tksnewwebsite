@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 import { getAllPosts } from "@/lib/blog";
+import { locations } from "@/lib/locations";
 
 const BASE = "https://thetks.com";
 
@@ -18,6 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
+  const locationRoutes: MetadataRoute.Sitemap = locations.map((l) => ({
+    url: `${BASE}/locations/${l.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   const blogRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
@@ -25,5 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  return [...staticRoutes, ...locationRoutes, ...blogRoutes];
 }

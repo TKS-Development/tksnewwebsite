@@ -36,6 +36,29 @@ export const metadata: Metadata = {
   },
 };
 
+const maturityLevels = [
+  {
+    level: 1,
+    title: "AI as Individual Productivity",
+    body: "A few people on your team use ChatGPT or similar tools on their own. It speeds up their personal work, but nothing is connected — and the rest of the business doesn't see it.",
+  },
+  {
+    level: 2,
+    title: "AI as Team Automation",
+    body: "AI gets wired into the workflows your team runs every day — follow-ups, scheduling, reporting, customer intake. The repetitive stuff runs itself so your people can focus on the work that actually requires them.",
+  },
+  {
+    level: 3,
+    title: "AI as Agentic Workflows",
+    body: "Automated systems handle entire processes end-to-end — from first touch to follow-up to fulfillment — with your team stepping in only when it matters. You grow revenue without adding headcount.",
+  },
+  {
+    level: 4,
+    title: "AI as Operating Model",
+    body: "AI is woven into how your business runs. Your systems track what's working, flag what isn't, and improve over time. The business gets smarter the longer it operates.",
+  },
+];
+
 const struggles = [
   {
     num: "01",
@@ -237,11 +260,35 @@ export default function AITransformationPage() {
         </Container>
       </section>
 
+      {/* MATURITY MODEL */}
+      <section className="py-24 bg-canvas-2 border-b border-line">
+        <Container>
+          <SectionHeading
+            index="I."
+            eyebrow="AI maturity model"
+            title="Four levels of AI adoption."
+            lede="Most small businesses are stuck at Level 1 or 2 — using AI in bits and pieces but not seeing it in the bottom line. Here's the framework we use to figure out where you are and what it takes to move forward."
+          />
+
+          <div className="mt-16 grid md:grid-cols-2 gap-x-10 gap-y-10 border-t border-line pt-12">
+            {maturityLevels.map((l) => (
+              <div key={l.level}>
+                <span className="num-label">Level {l.level}</span>
+                <h3 className="display mt-3 text-2xl text-ink">{l.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-ink-soft max-w-prose">
+                  {l.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* THE GAP */}
       <section className="py-24">
         <Container>
           <SectionHeading
-            index="I."
+            index="II."
             eyebrow="The implementation gap"
             title="Most AI initiatives stall after the pilot."
             lede="Global corporate spending on generative AI is projected to exceed $200 billion by 2027. Yet research consistently shows the majority of AI projects never move past experimentation. The barrier isn't the technology. It's implementation."
@@ -265,7 +312,7 @@ export default function AITransformationPage() {
       <section className="py-24 border-y border-line bg-canvas-2">
         <Container>
           <SectionHeading
-            index="II."
+            index="III."
             eyebrow="How we work"
             title="We embed. We deploy. We document. We leave."
             lede="A dedicated external partner resolves the constraints that hold internal teams back: singular focus, cross-industry expertise, measurement frameworks from day one, and a time-bound mandate that prevents scope creep."
@@ -291,7 +338,7 @@ export default function AITransformationPage() {
       <section id="methodology" className="py-24 scroll-mt-24">
         <Container>
           <SectionHeading
-            index="III."
+            index="IV."
             eyebrow="Engagement methodology"
             title="A 90-day framework, refined across deployments."
             lede="Rigorous in structure, adaptive in execution. Four phases that move from diagnosis to self-sufficient internal capability — with clear milestones, measurable outcomes, and a hard end date that keeps every engagement urgent."
@@ -321,7 +368,7 @@ export default function AITransformationPage() {
       <section className="py-24 border-y border-line bg-canvas-2">
         <Container>
           <SectionHeading
-            index="IV."
+            index="V."
             eyebrow="Implementation packages"
             title="Three packages. One outcome: AI that drives real business results."
             lede="The difference is depth — how many workflows we automate, how many departments we touch, and how transformative the scope. Every package includes mandatory post-launch support."
@@ -369,7 +416,7 @@ export default function AITransformationPage() {
       <section className="py-24">
         <Container>
           <SectionHeading
-            index="V."
+            index="VI."
             eyebrow="What to expect"
             title="Real operational outcomes — not experimental AI."
             lede="We measure success by the business results your automations deliver — reduced manual work, faster response times, and teams that can scale without burning out."
@@ -393,7 +440,7 @@ export default function AITransformationPage() {
         <Container>
           <div className="grid lg:grid-cols-12 gap-10 items-end">
             <div className="lg:col-span-8">
-              <p className="num-label">VI. / Next step</p>
+              <p className="num-label">VII. / Next step</p>
               <h2 className="display mt-6 text-5xl sm:text-6xl leading-[1.02] text-ink max-w-[18ch]">
                 Ready to start your AI transformation?
               </h2>

@@ -4,9 +4,33 @@ import { Container } from "@/components/container";
 import { getAllPosts, formatDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Journal · TechKey Solutions",
+  title: "Journal — Practical Notes on AI & Business Automation · TechKey Solutions",
   description:
-    "Practical notes on CRM, ERP, AI, integrations and the systems that run modern businesses.",
+    "Practical write-ups on AI automation, CRM, ERP, and the integrations that actually move the needle for small and mid-sized businesses.",
+  keywords: [
+    "AI automation blog",
+    "small business AI tips",
+    "CRM ERP insights",
+    "workflow automation guide",
+    "business technology journal",
+    "TechKey Solutions blog",
+  ],
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Journal — Practical Notes on AI & Business Automation",
+    description:
+      "Practical write-ups on AI automation, CRM, ERP, and the integrations that actually move the needle for small and mid-sized businesses.",
+    url: "/blog",
+    siteName: "TechKey Solutions",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Journal — Practical Notes on AI & Business Automation",
+    description:
+      "Practical write-ups on AI automation, CRM, ERP, and the integrations that actually move the needle for small and mid-sized businesses.",
+  },
 };
 
 export default function BlogIndexPage() {

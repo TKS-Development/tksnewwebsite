@@ -21,6 +21,21 @@ export async function generateMetadata({
   return {
     title: `${post.title} · TechKey Solutions`,
     description: post.description,
+    robots: { index: true, follow: true },
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `/blog/${post.slug}`,
+      siteName: "TechKey Solutions",
+      type: "article",
+      publishedTime: post.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+    },
   };
 }
 

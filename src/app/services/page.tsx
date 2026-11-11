@@ -29,6 +29,12 @@ export const metadata: Metadata = {
     siteName: site.name,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation Services & Packages · TechKey Solutions",
+    description:
+      "Practical AI automation packages for small and mid-sized businesses. Start with a strategy assessment or jump straight to implementation.",
+  },
 };
 
 const assessmentIncludes = [
@@ -45,81 +51,6 @@ const assessmentDeliverables = [
   "Automation recommendations",
   "ROI estimate",
   "60-day implementation roadmap",
-];
-
-const implementationPackages = [
-  {
-    num: "02",
-    name: "Starter AI Launch",
-    bestFor: "Small businesses wanting immediate efficiency wins",
-    fee: "$10,000",
-    retainer: "+ $2,500/month support (3 months)",
-    timeline: "4-week implementation · 3 months optimization",
-    includes: [
-      "1–2 workflow automations",
-      "Lead follow-up automation",
-      "Basic chatbot setup",
-      "CRM automation cleanup",
-      "Basic reporting dashboard",
-      "Staff training",
-      "Implementation support",
-    ],
-    support: [
-      "Bug fixes & workflow adjustments",
-      "Team support",
-      "Performance optimization",
-      "Monthly strategy calls",
-    ],
-  },
-  {
-    num: "03",
-    name: "Growth AI Package",
-    bestFor: "Growing businesses automating multiple functions",
-    fee: "$25,000",
-    retainer: "+ $4,000/month support (4 months)",
-    timeline: "6–8 week implementation · 4 months optimization",
-    includes: [
-      "Everything in Starter, plus:",
-      "Multi-department workflow automation",
-      "Customer service automation",
-      "Marketing automation",
-      "Sales automation",
-      "Document automation",
-      "Advanced dashboards",
-      "SOP redesign",
-    ],
-    support: [
-      "Workflow optimization",
-      "Team retraining",
-      "Prompt refinement",
-      "New automation enhancements",
-      "Monthly executive review calls",
-    ],
-  },
-  {
-    num: "04",
-    name: "Scale AI Transformation",
-    bestFor: "Mid-sized businesses seeking broader transformation",
-    fee: "$35,000",
-    retainer: "+ $5,000/month support (6 months)",
-    timeline: "10–12 week implementation · 6 months optimization",
-    includes: [
-      "Everything in Growth, plus:",
-      "Custom AI assistants",
-      "Advanced integrations",
-      "Cross-platform automation",
-      "Executive dashboards",
-      "Department transformation",
-      "AI operating model design",
-    ],
-    support: [
-      "Continuous optimization",
-      "New workflow creation",
-      "Executive advisory",
-      "AI scaling roadmap",
-      "KPI monitoring",
-    ],
-  },
 ];
 
 const commonSolutions = [
@@ -237,113 +168,15 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* IMPLEMENTATION PACKAGES */}
-      <section className="py-24 bg-canvas-2 border-b border-line">
-        <Container>
-          <AnimateIn>
-            <SectionHeading
-              index="II."
-              eyebrow="Implementation packages"
-              title="From first automation to full transformation."
-              lede="Every package includes a mandatory post-launch support period to ensure your automations keep performing — not just at launch, but as your business evolves."
-            />
-          </AnimateIn>
-
-          <div className="mt-16 grid lg:grid-cols-3 gap-6">
-            {implementationPackages.map((pkg, i) => (
-              <AnimateIn key={pkg.name} delay={i * 0.1}>
-                <article className="bg-canvas border border-line rounded-lg p-8 flex flex-col h-full">
-                  <header>
-                    <span className="num-label">{pkg.num}</span>
-                    <h2 className="display mt-3 text-2xl text-ink leading-tight">
-                      {pkg.name}
-                    </h2>
-                    <p className="mt-2 text-[13px] text-ink-soft italic">
-                      {pkg.bestFor}
-                    </p>
-                    <div className="mt-5 border-t border-line pt-5">
-                      <p className="display text-3xl text-ink">{pkg.fee}</p>
-                      <p className="mt-1 text-[13px] text-ink-soft">{pkg.retainer}</p>
-                      <p className="mt-2 num-label">{pkg.timeline}</p>
-                    </div>
-                  </header>
-
-                  <div className="mt-6 flex-1">
-                    <p className="eyebrow mb-3">Includes</p>
-                    <ul className="space-y-2 text-[14px] text-ink-soft">
-                      {pkg.includes.map((item) => (
-                        <li key={item} className="flex items-baseline gap-2.5">
-                          <span aria-hidden="true" className="text-accent shrink-0">✦</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mt-6 border-t border-line pt-5">
-                    <p className="eyebrow mb-3">Post-launch support includes</p>
-                    <ul className="space-y-2 text-[14px] text-ink-soft">
-                      {pkg.support.map((item) => (
-                        <li key={item} className="flex items-baseline gap-2.5">
-                          <span aria-hidden="true" className="text-ink-soft/50 shrink-0">·</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              </AnimateIn>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* ONGOING SUPPORT */}
-      <section className="py-24 border-b border-line">
-        <Container>
-          <AnimateIn>
-            <div className="grid lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-7">
-                <span className="num-label">III. / Long-term</span>
-                <h2 className="display mt-4 text-4xl lg:text-5xl text-ink leading-[1.05]">
-                  Continued optimization after launch.
-                </h2>
-                <p className="mt-5 text-[16px] leading-relaxed text-ink-soft max-w-prose">
-                  For businesses that want continued AI expansion, workflow
-                  refinement, and long-term strategic support after their
-                  initial engagement period wraps up.
-                </p>
-              </div>
-              <div className="lg:col-span-4 lg:col-start-9">
-                <div className="bg-canvas-2 border border-line rounded-lg p-8">
-                  <p className="num-label">Ongoing optional support</p>
-                  <p className="display mt-3 text-3xl text-ink">
-                    From $2,500<span className="text-ink-soft text-xl">/month</span>
-                  </p>
-                  <p className="mt-2 text-[14px] text-ink-soft">or billed at $350/hour</p>
-                  <Link
-                    href="/contact"
-                    className="mt-6 btn-secondary inline-flex w-full justify-between"
-                  >
-                    <span>Get in touch</span>
-                    <span aria-hidden="true">→</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </AnimateIn>
-        </Container>
-      </section>
-
       {/* CTA */}
       <section className="py-28">
         <Container>
           <AnimateIn>
             <div className="grid lg:grid-cols-12 gap-10 items-end">
               <div className="lg:col-span-8">
-                <p className="num-label">IV. / Next step</p>
+                <p className="num-label">II. / Next step</p>
                 <h2 className="display mt-6 text-5xl sm:text-6xl leading-[1.02] text-ink max-w-[18ch]">
-                  Not sure which package fits?
+                  Not sure where to start?
                 </h2>
                 <p className="mt-6 text-[17px] leading-relaxed text-ink-soft max-w-xl">
                   Book a free consultation and we&apos;ll walk through your

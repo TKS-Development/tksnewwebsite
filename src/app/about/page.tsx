@@ -7,9 +7,33 @@ import { Counter } from "@/components/counter";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About · TechKey Solutions",
+  title: "About TechKey Solutions — AI & Business Automation Since 2016",
   description:
-    "Since 2016, TechKey Solutions has been a trusted technology partner delivering CRM, ERP, AI, and integration solutions.",
+    "Since 2016, TechKey Solutions has helped small and mid-sized businesses with CRM, ERP, AI automation, and integration solutions. Real technology partnerships — not one-off projects.",
+  keywords: [
+    "TechKey Solutions",
+    "AI automation company",
+    "small business technology partner",
+    "CRM ERP consulting",
+    "business automation since 2016",
+    "AI consulting firm",
+  ],
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About TechKey Solutions — AI & Business Automation Since 2016",
+    description:
+      "Since 2016, TechKey Solutions has helped small and mid-sized businesses with CRM, ERP, AI automation, and integrations.",
+    url: "/about",
+    siteName: site.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About TechKey Solutions — AI & Business Automation Since 2016",
+    description:
+      "Since 2016, TechKey Solutions has helped small and mid-sized businesses with CRM, ERP, AI automation, and integrations.",
+  },
 };
 
 
@@ -53,7 +77,7 @@ export default function AboutPage() {
               <span className="eyebrow">Est. {site.established}</span>
             </div>
             <h1 className="hero-headline mt-8 text-ink max-w-[20ch]">
-              A trusted technology partner since 2016.
+              AI Solutions for Businesses of Every Size.
             </h1>
           </AnimateIn>
 
