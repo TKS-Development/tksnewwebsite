@@ -9,19 +9,16 @@ Markdown blog and a contact form that emails submissions.
 - **Tailwind CSS 4**
 - **TypeScript**
 - **Markdown blog** (`content/blog/*.md`, rendered with `gray-matter` + `marked`)
-- **Contact form** delivered via [Resend](https://resend.com)
+- **Contact form** delivered via [Formspree](https://formspree.io)
 
 ## Local development
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in RESEND_API_KEY if you want real emails
 npm run dev
 ```
 
 Open http://localhost:3000.
-
-If `RESEND_API_KEY` isn't set, the contact form logs submissions to the server console and returns success — handy for local testing.
 
 ## Writing blog posts
 
@@ -43,15 +40,13 @@ It will show up automatically at `/blog/<filename-without-extension>`.
 
 ## Deployment
 
-Designed to deploy to Vercel:
+thetks.com is hosted on **Netlify** (site `boisterous-dragon-d89b8e`) and deploys automatically from `main`.
 
-1. Push this repo to GitHub.
-2. Import in Vercel.
-3. Set env vars in the Vercel project:
-   - `RESEND_API_KEY`
-   - `CONTACT_TO_EMAIL`
-   - `CONTACT_FROM_EMAIL`
-4. Point thetks.com DNS at the Vercel deployment.
+- **GitHub is the only source of truth.** Never upload files to a host by hand. Every change goes through a pull request into `main`.
+- Each pull request gets a Netlify deploy preview. Check it before merging.
+- Merging into `main` publishes to the live site.
+
+Before any hosting or DNS move, compare every page on the old host with the new build. If the old host has anything newer than this repo, bring it into the repo first.
 
 ## Structure
 
